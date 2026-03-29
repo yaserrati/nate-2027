@@ -131,7 +131,7 @@ nav {
   display: flex; align-items: center; gap: 0.85rem;
 }
 .logo-box {
-  width: 100px; height: 42px;
+  width: 98px; height: 45px;
   border: 1.5px solid var(--orange);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--display);
@@ -690,16 +690,36 @@ nav {
   background-size: 40px 40px;
 }
 .morocco-shape {
-  position: absolute; top: 8%; left: 12%; width: 68%; height: 78%;
-  border: 1px solid rgba(234,59,21,0.2);
-  background: rgba(234,59,21,0.04);
-  clip-path: polygon(8% 0%, 82% 0%, 100% 14%, 96% 62%, 84% 100%, 38% 96%, 10% 84%, 0 48%, 2% 18%);
+  position: absolute; 
+  top: 30%; /* Adjusted to fit the station offsets */
+  left: 10%; 
+  width: 90%; 
+  height: 60%;
+  border: 1px solid rgba(234, 59, 21, 0.2);
+  background: rgba(234, 59, 21, 0.04);
+  
+  /* Points based on your station markers */
+  clip-path: polygon(
+    20% 35%,   /* Near Tangier/Larache coast */
+    15% 20%,   /* Tangier Peak */
+    45% 35%,   /* Mediterranean Coast (Tetouan area) */
+    70% 38%,   /* Al Hoceima / Nador coastline */
+    90% 42%,   /* Berkane corner */
+    100% 60%,  /* Oujda (East border) */
+    75% 85%,   /* Ceuta */
+    90% 42%,   /* laarach */
+    100% 60%,  /* asilah */
+    75% 85%,   /* Lower East */
+    42% 95%,   /* Fès (The Southern tip of your map) */
+    15% 70%    /* Back up the Atlantic side toward Larache */
+  );
 }
 .eclipse-path-glow {
   position: absolute; top: 28%; left: -5%; width: 110%; height: 28%;
   background: linear-gradient(90deg, transparent, rgba(234,59,21,0.07), rgba(245,166,35,0.1), rgba(234,59,21,0.07), transparent);
   transform: rotate(-6deg); pointer-events: none;
 }
+
 .eclipse-path-line {
   position: absolute; top: 42%; left: -5%; width: 110%; height: 3px;
   background: linear-gradient(90deg, transparent, var(--orange) 20%, var(--gold) 50%, var(--orange) 80%, transparent);
@@ -1075,7 +1095,7 @@ nav {
 .team-card:hover .team-overlay { opacity: 1; }
 
 .team-photo {
-  aspect-ratio: 3/4; background: var(--dark);
+  aspect-ratio: 3/3; background: var(--dark);
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;
   background: repeating-linear-gradient(135deg, rgba(234,59,21,0.04), rgba(234,59,21,0.04) 10px, var(--dark) 10px, var(--dark) 20px);
