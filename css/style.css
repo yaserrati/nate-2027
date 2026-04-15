@@ -181,7 +181,7 @@ nav {
 .nav-links a {
   font-family: var(--mono);
   font-size: 0.77rem;
-  
+  font-weight: bold;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-dim);
