@@ -224,27 +224,39 @@ nav {
 /* Mobile nav drawer */
 .nav-drawer {
   display: none;
-  position: fixed; top: var(--nav-h); left: 0; right: 0;
-  background: rgba(26,18,8,0.97);
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  background: #241607;
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   z-index: 199;
   padding: 1.5rem 2rem 2rem;
-  flex-direction: column; gap: 0;
+  flex-direction: column;
+  gap: 0;
 }
-.nav-drawer.open { display: flex; }
+
+.nav-drawer.open {
+  display: flex;
+  animation: slideDown 0.3s ease-out;
+}
+
 .nav-drawer a {
   display: block;
+  width: 100%;              /* 👈 important */
+  background: #241607;
   font-family: var(--mono);
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-dim);
-  padding: 0.9rem 0;
+  padding: 0.9rem 1rem;     /* 👈 add horizontal padding */
   border-bottom: 1px solid var(--border-faint);
   transition: color 0.2s;
+  box-sizing: border-box;   /* 👈 ensures padding doesn't break width */
 }
-.nav-drawer a:hover { color: var(--orange); }
+.nav-drawer a:hover { color: var(--orange);  }
 .nav-drawer .drawer-cta {
   margin-top: 1.25rem;
   display: inline-block;
